@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: 179, 62%, 43%;
+  --bright-yellow: 71, 73%, 54%;
+  --light-gray: hsl(204, 42%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.container {
+  width: min(90%, 40rem);
+  margin-inline: auto;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section {
+  padding: 1.5rem;
+}
+
+.card-1 {
+  background-color: #fff;
+}
+.card-2 {
+  background-color: hsl(var(--cyan));
+}
+.card-3 {
+  background-color: hsla(var(--cyan), 0.7);
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.sub-title {
+  color: hsl(var(--bright-yellow));
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.text {
+  color: var(--light-gray);
+  line-height: 1.7;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.prices p:first-child {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.prices p:last-child {
+  color: var(--light-gray);
+  opacity: 0.5;
+  margin-inline: 1rem;
+}
+
+.button {
+  display: block;
+  text-decoration: none;
+  background-color: hsl(var(--bright-yellow));
+  color: #fff;
+  padding-block: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  background-color: hsla(var(--bright-yellow), 0.8);
+}
+
+.card-3 .text {
+  width: max(70%);
+}
+
+@media (min-width: 576px) {
+  body {
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .card-1 {
+    grid-column-start: 2 span;
+  }
+
+  .card-3 .text {
+    width: max(90%);
+  }
+}
+
+/* utilities */
+
+.text-dark {
+  color: var(--grayish-blue);
+}
+
+.title-primary {
+  color: hsl(var(--cyan));
+}
